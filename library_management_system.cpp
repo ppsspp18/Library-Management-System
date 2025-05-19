@@ -53,8 +53,8 @@ void User::signup() {
     cout << "Are you a manager? (1 for Yes, other for No): "<<endl;
     string temp;
     cin >> temp;
-    if(temp=="1") isManager=true;
-    else false;
+    if(temp=="1") isManager = true;
+    else isManager = false;
 
     ofstream file("users.csv", ios::app);
     if (file.is_open()) {
