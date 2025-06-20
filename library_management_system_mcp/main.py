@@ -135,8 +135,8 @@ load_old_orders_data()
 
 # Tool to add book
 @mcp.tool()
-def add_book(title: str, author: str, price: str, quantity: int) -> str:
-    """To add book using book title, author and price in string and quantity in integer."""
+def add_book(title: str, author: str, price: int, quantity: int) -> str:
+    """To add book using book title and author in string, price and quantity in integer."""
     book = Book(title, author, price, quantity)
     books_db[book.id] = book
     save_books_data()
@@ -233,6 +233,34 @@ def get_book_status(book_id: str) -> dict:
     """this tool return particular book the book title, author, quantity and price"""
     book = books_db.get(book_id)
     if book:
+        return book.to_dict()
+    return {"error": "Book ID not found"}
+
+# Tool to change book quantity
+@mcp.tool()
+def change_book_quantity(book_id: str, change: int) -> dict:
+    """this tool change particular book quantity
+    change will be negative to lower the quantity"""
+    book = books_db.get(book_id)
+    if book:
+        if (change < 0) and ((-change)>book.quantity) :
+            return {"error": "Not feasible"}
+        book.quantity += change
+        save_books_data()
+        return book.to_dict()
+    return {"error": "Book ID not found"}
+
+# Tool to change book price
+@mcp.tool()
+def change_book_price(book_id: str, change: int) -> dict:
+    """this tool change particular book price 
+    change will be negative to lower price"""
+    book = books_db.get(book_id)
+    if book:
+        if (change < 0) and ((-change)> book.price) :
+            return {"error": "Not feasible"}
+        book.price += change
+        save_books_data()
         return book.to_dict()
     return {"error": "Book ID not found"}
 
