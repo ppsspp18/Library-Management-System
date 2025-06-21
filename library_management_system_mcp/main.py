@@ -250,6 +250,21 @@ def change_book_quantity(book_id: str, change: int) -> dict:
         return book.to_dict()
     return {"error": "Book ID not found"}
 
+# Tool to delete book
+@mcp.tool()
+def delete_book(book_id: str) -> dict:
+    """this tool useed to delete particular book"""
+    book = books_db.get(book_id)
+    if book:
+        book_title = book.title
+        order = next((b for b in orders_db.values() if b.title == book_title), None)
+        if not order:
+            del books_db[book.id]
+            save_books_data()
+            return book.to_dict()
+        return {"error": "book is borrowed"}
+    return {"error": "Book ID not found"}
+
 # Tool to change book price
 @mcp.tool()
 def change_book_price(book_id: str, change: int) -> dict:
