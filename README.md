@@ -57,7 +57,9 @@ pip install uv
 uv init Library_management_system
 cd Library_management_system
 ```
-### 3. Run the project
+### 3. Edit main.py file
+
+### 4. Run the project
 ```
 uv run mcp install main.py
 ```
