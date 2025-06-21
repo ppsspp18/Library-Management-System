@@ -37,6 +37,8 @@ This project includes the following MCP tools:
 - `search_order_by_customer`
 - `list_all_old_order`
 
+all changes are saved locally in .json file 
+
 ## 🧱 Technologies Used
 
 - Python
