@@ -16,11 +16,11 @@ Programming Language: C++
 Concepts: File Handling, Object-Oriented Programming (OOP)
 This project is ideal for understanding the implementation of core OOP concepts and file-based data management in C++.
 
-# 📚 Library Management System with Claude Desktop using MCP
+# Library Management System with Claude Desktop using MCP
 
 This is a simple, file-based **Library Management System** built using the **FastMCP** framework and integrated with **Claude Desktop** using `uv`. It supports basic library operations like adding books, borrowing/returning them, and managing book records.
 
-## 🔧 Features
+## Features
 
 This project includes the following MCP tools:
 
@@ -39,7 +39,7 @@ This project includes the following MCP tools:
 
 all changes are saved locally in .json file 
 
-## 🧱 Technologies Used
+## Technologies Used
 
 - Python
 - [FastMCP](https://github.com/crewai-dev/mcp) from `mcp.server.fastmcp`
@@ -48,7 +48,7 @@ all changes are saved locally in .json file
 - JSON files for persistent storage
 - `uv` for MCP integration with Claude Desktop
 
-## 📦 Installation
+## Installation
 
 ### 1. Install `uv` (if not installed)
 ```bash
