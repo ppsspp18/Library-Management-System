@@ -52,6 +52,7 @@ while (true) {
         cout << "Enter your choice: ";
     }
 }
+```
 
 # Library Management System Integrated with Claude Desktop using MCP
 
