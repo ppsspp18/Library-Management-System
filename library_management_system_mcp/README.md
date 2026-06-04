@@ -448,6 +448,6 @@ Through this project I learned:
 
 ---
 
-## Interview Summary
+## Summary
 
 This project demonstrates how Large Language Models can interact with external systems through the Model Context Protocol. Using FastMCP, I exposed library operations as AI-callable tools and connected them with Claude Desktop. The project includes inventory management, borrowing workflows, transaction history, fine calculation, data persistence, and AI-powered natural language interaction, providing hands-on experience in Agentic AI, MCP architecture, and backend system design.
